@@ -7,13 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: #f9f9f9;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-header{
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,14 +25,15 @@ header{
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 2em;
     color: #359381;
+    /* Verifique se precisa realmente bloquear cliques na logo */
     pointer-events: none;
-    margin-right: 270px;
+    margin-right: 270px; /* Pode causar problemas em telas menores */
 }
 
-.navigation a{
+.navigation a {
     text-decoration: none;
     color: #359381;
     padding: 6px 15px;
@@ -41,16 +42,17 @@ header{
     font-weight: 600;
 }
 
-.navigation a:hover{
-     background: #359381;
-    color: #f9f9f9;
-} 
-.navigation a.active{
+.navigation a:hover {
     background: #359381;
     color: #f9f9f9;
 }
 
-.parallax{
+.navigation a.active {
+    background: #359381;
+    color: #f9f9f9;
+}
+
+.parallax {
     position: relative;
     display: flex;
     justify-content: center;
@@ -58,36 +60,35 @@ header{
     height: 100vh;
 }
 
-#text{
+#text {
     position: absolute;
     font-size: 5em;
     color: #fff;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0, .2);
+    /* Corrigindo o valor de rgba para rgba em vez de rgb */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-.parallax img{
+.parallax img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     pointer-events: none;
-
 }
 
-.sec{
+.sec {
     position: relative;
     background-color: #003329;
     padding: 100px;
 }
 
-.sec h2{
+.sec h2 {
     font-size: 3em;
     color: #fff;
     margin-bottom: 10px;
-
 }
 
-.sec p{
+.sec p {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
